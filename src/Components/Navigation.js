@@ -10,13 +10,13 @@ const Navigation = () => {
         <nav>
             <img src="https://picsum.photos/30/30" alt="" />
             <ul ref={ref} className={show ? "show" : ""}>
-                <li>
+                <li ref={ref}>
                     <Link to="/" onClick={() => setShow(false)}>Home</Link>
                 </li>
-                <li>
+                <li ref={ref}>
                     <Link to="/about" onClick={() => setShow(false)}>About</Link>
                 </li>
-                <li>
+                <li ref={ref}>
                     <Link to="/faq" onClick={() => setShow(false)}>FAQ</Link>
                 </li>
             </ul>
