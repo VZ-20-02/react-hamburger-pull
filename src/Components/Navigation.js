@@ -7,9 +7,9 @@ const Navigation = () => {
     useOnClickOutside(ref, () => setShow(false));
 
     return (
-        <nav>
+        <nav ref={ref}>
             <img src="https://picsum.photos/30/30" alt="" />
-            <ul ref={ref} className={show ? "show" : ""}>
+            <ul className={show ? "show" : ""}>
                 <li>
                     <Link to="/" onClick={() => setShow(false)}>Home</Link>
                 </li>
