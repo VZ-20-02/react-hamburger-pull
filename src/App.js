@@ -1,15 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
-import Eric from './Components/Eric';
-import Georg from './Components/Georg'
+import Navigation from './Components/Navigation';
+import Home from './Components/Home';
+import FAQ from './Components/FAQ';
+import About from './Components/About';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 
 function App() {
   return (
-    <div className="App">
-      <Eric />
-      <Georg />
-    </div>
+    <Router>
+      <Navigation />
+      <Switch>
+        <Route path="/" component={Home} exact />
+        <Route path="/about" component={About} />
+        <Route path="/faq" component={FAQ} />
+      </Switch>
+    </Router>
   );
 }
 
